@@ -1,0 +1,6 @@
+Employee ID,Employee Name,Department,Designation,Email,Mobile Number,Line Manager,Date of Joining,Address,Pin Code,Stock ID,Remarks
+11,N.Rama Krishna,Digital Asset management,Equity Dealer,rama@gmail.com,6440740895,2,30-10-2008,"h.no:-2-76,State bank colony,Banglore",518975,25,nil
+12,k.Rajendra,Financial Asset management,Market Reasearch Analyst,rajendra@gmail.com,9440859789,2,18-08-2009,"h.no:-78-876,ram nagar,Mumbai",610025,1,nil
+13,L.John,Digital Asset management,Credit Analyst,john@gmail.com,7675894589,2,16-09-2011,"h.no:-79-876,Ram nagar,Banglore",895623,23,nil
+14,H.Jyothi,Enterprice Asset management,Fund Accountant,jyothi@gmail.com,5688923741,7,15-12-2006,"h.no:-27-776,krishna colony,Banglore",485128,25,nil
+15,k.Ramalakshmi,Fixed Asset management,private Equity Specialist,ramalakshmi@gmail.com,7894561235,2,15-02-2012,"h.no:-458-976,RK colony,Hyderabad",518974,,nil

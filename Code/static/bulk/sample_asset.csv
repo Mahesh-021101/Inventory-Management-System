@@ -1,0 +1,6 @@
+Stock ID,Product Name,Product Price,Supplier,Serial Number,Depreciation %,Purchase Date,Expiry Date,Remarks
+21,mouse,500,2345,78956,25,12-08-1998,12-08-2010,nil
+22,printer,4000,5689,78954,84,13-09-2005,13-09-2020,nil
+23,moniter,"22,950",4521,12563,12,13-12-2005,13-12-2025,nil
+24,hard drive ,"7,500",1256,78956,3,15-02-2009,15-02-2019,nil
+25,DVD,"1,690",1258,54126,0,12-08-2003,12-08-2023,nil

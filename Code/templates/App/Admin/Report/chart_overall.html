@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+
+<!-- Mirrored from www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-light/index by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 12 Mar 2022 17:01:38 GMT -->
+<head>
+  <!-- Required meta tags -->
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Asset Tracking and Inventory Management System </title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'vendors/feather/feather.css'%} ">
+  <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css'%} ">
+  <link rel="stylesheet" href="{% static 'vendors/ti-icons/css/themify-icons.css'%} ">
+  <link rel="stylesheet" href="{% static 'vendors/typicons/typicons.css'%} ">
+  <link rel="stylesheet" href="{% static 'vendors/simple-line-icons/css/simple-line-icons.css'%} ">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css'%} ">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="{% static 'vendors/datatables.net-bs4/dataTables.bootstrap4.css'%} ">
+  <link rel="stylesheet" type="text/css" href="{% static 'js/select.dataTables.min.css'%} ">
+  <link rel="stylesheet" href="{% static 'vendors/select2/select2.min.css'%} ">
+  <link rel="stylesheet" href="{% static 'vendors/morris.js/morris.css'%} ">
+  <link rel="stylesheet" href="{% static 'vendors/select2-bootstrap-theme/select2-bootstrap.min.css'%} ">
+
+
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'css/vertical-layout-light/style.css'%} ">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'images/favicon.png'%} " />
+</head>
+<body class="with-welcome-text">
+  <div class="container-scroller">
+
+    <!-- partial:partials/_navbar -->
+    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+        <div class="me-3">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+        <div>
+          <a class="navbar-brand brand-logo" href="/Admin_Dashboard/">
+            <img src="{% static 'Assert/Logo3.png'%}" alt="logo" />
+          </a>
+          <a class="navbar-brand brand-logo-mini" href="/Admin_Dashboard/">
+            <img src="{% static 'Assert/Logo3.png'%}" alt="logo" />
+          </a>
+        </div>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-top">
+        <ul class="navbar-nav">
+          <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+            <h1 class="welcome-text">Welcome, <span class="text-black fw-bold">Admin</span></h1>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+            <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="img-xs rounded-circle" src="{% static 'images/empty_face.jpg' %}" alt="Profile image"> </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+              <div class="dropdown-header text-center">
+                <img class="img-md rounded-circle" src="{% static 'images/empty_face.jpg' %}" alt="Profile image">
+
+              </div>
+ <a href="/change_password/" class="dropdown-item"><i class="dropdown-item-icon mdi mdi-lock-open-outline text-primary me-2"></i> Change Password</a>
+              <a href="/logout
+/" class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
+
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel -->
+      <div hidden class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border me-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border me-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- partial -->
+      <!-- partial:partials/_sidebar -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/Admin_Dashboard/">
+              <i class="mdi mdi-grid-large menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/allocate/">
+              <i class="menu-icon mdi mdi-account-key"></i>
+              <span class="menu-title">Allocation</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="\deallocate\">
+              <i class="menu-icon mdi mdi-account-minus"></i>
+              <span class="menu-title">Deallocate</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item nav-category">Authentication</li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/allocationApproval/">
+              <i class="menu-icon mdi  mdi mdi-check"></i>
+              <span class="menu-title">Allocation Approval</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/depreciationApproval/">
+              <i class="menu-icon ti-arrow-down"></i>
+              <span class="menu-title">Depreciation Approval</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item nav-category">Data</li>
+          <li class="nav-item">
+            <a class="nav-link" href="/employee/">
+              <i class="menu-icon mdi  mdi mdi-account"></i>
+              <span class="menu-title">Employee</span>
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/newAllocator/">
+              <i class="menu-icon mdi  mdi mdi-account"></i>
+              <span class="menu-title">Allocator</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/supplier/">
+              <i class="menu-icon mdi mdi-worker"></i>
+              <span class="menu-title">Supplier</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/stock/">
+              <i class="menu-icon mdi mdi-cart"></i>
+              <span class="menu-title">Stock</span>
+            </a>
+          </li>
+
+
+            <li class="nav-item">
+            <a class="nav-link" href="/bulk/">
+              <i class="menu-icon mdi mdi-cloud"></i>
+              <span class="menu-title">Bulk Upload</span>
+            </a>
+          </li>
+
+          <li class="nav-item nav-category">Report</li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/overallInventory/" >
+              <i class="menu-icon mdi mdi-book-open"></i>
+              <span class="menu-title">Overall Inventory</span>
+            </a>
+          </li>
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
+              <i class="menu-icon mdi mdi-book-multiple"></i>
+              <span class="menu-title">Group Wise</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="general-pages">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="/rasset/">Asset</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/rconsumable/">Consumables</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/rscrap/">Scrap</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+              <i class="menu-icon mdi mdi mdi-chart-line"></i>
+              <span class="menu-title">Charts</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="error">
+              <ul class="nav flex-column sub-menu">
+                 <li class="nav-item"> <a class="nav-link" href="/chart_overall/">Inventory</a></li>
+                 <li class="nav-item"> <a class="nav-link" href="/chart_allocation/">Cash Flow</a></li>
+              </ul>
+            </div>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Stock Summary</h4>
+                  <canvas id="dash_chart" ></canvas>
+<script src='https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js'></script>
+<script>
+const ctx = document.getElementById('dash_chart').getContext('2d');
+const dash_chart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Asset', 'Consumable', 'Scrap'],
+        datasets: [{
+            label: '# of Votes',
+            data: {{data | safe}},
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        radius: '75%',
+
+    }
+});
+</script>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        <!-- content-wrapper ends -->
+        <!-- partial -->
+      </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer -->
+
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="{% static 'vendors/js/vendor.bundle.base.js'%} "></script>
+  <script src="{% static 'vendors/bootstrap-datepicker/bootstrap-datepicker.min.js'%} "></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="{% static 'vendors/chart.js/Chart.min.js'%} "></script>
+  <script src="{% static 'vendors/progressbar.js/progressbar.min.js'%} "></script>
+  <script src="{% static 'vendors/typeahead.js/typeahead.bundle.min.js'%} "></script>
+  <script src="{% static 'vendors/select2/select2.min.js'%} "></script>
+  <script src="{% static 'vendors/datatables.net/jquery.dataTables.js'%} "></script>
+  <script src="{% static 'vendors/datatables.net-bs4/dataTables.bootstrap4.js'%} "></script>  <!-- End plugin js for this page -->
+  <script src="{% static 'vendors/raphael/raphael.min.js'%} "></script>
+  <script src="{% static 'vendors/morris.js/morris.min.js'%} "></script>
+
+
+  <script src="{% static 'vendors/jquery-bar-rating/jquery.barrating.min.js'%} "></script>
+  <script src="{% static 'vendors/jquery-asColor/jquery-asColor.min.js'%} "></script>
+  <script src="{% static 'vendors/jquery-asGradient/jquery-asGradient.min.js'%} "></script>
+  <script src="{% static 'vendors/jquery-asColorPicker/jquery-asColorPicker.min.js'%} "></script>
+  <script src="{% static 'vendors/x-editable/bootstrap-editable.min.js'%} "></script>
+  <script src="{% static 'vendors/moment/moment.min.js'%} "></script>
+  <script src="{% static 'vendors/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.js'%} "></script>
+  <script src="{% static 'vendors/bootstrap-datepicker/bootstrap-datepicker.min.js'%} "></script>
+  <script src="{% static 'vendors/dropify/dropify.min.js'%} "></script>
+  <script src="{% static 'vendors/jquery-file-upload/jquery.uploadfile.min.js'%} "></script>
+  <script src="{% static 'vendors/jquery-tags-input/jquery.tagsinput.min.js'%} "></script>
+  <script src="{% static 'vendors/dropzone/dropzone.js'%} "></script>
+  <script src="{% static 'vendors/jquery.repeater/jquery.repeater.min.js'%} "></script>
+  <script src="{% static 'vendors/inputmask/jquery.inputmask.bundle.js'%} "></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="{% static 'js/off-canvas.js'%} "></script>
+  <script src="{% static 'js/hoverable-collapse.js'%} "></script>
+  <script src="{% static 'js/template.js'%} "></script>
+  <script src="{% static 'js/settings.js'%} "></script>
+  <script src="{% static 'js/todolist.js'%} "></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{% static 'js/jquery.cookie.js'%} " type="text/javascript"></script>
+  <script src="{% static 'js/dashboard.js'%} "></script>
+  <script src="{% static 'js/Chart.roundedBarCharts.js'%} "></script>
+  <script src="{% static 'js/file-upload.js'%} "></script>
+  <script src="{% static 'js/typeahead.js'%} "></script>
+  <script src="{% static 'js/select2.js'%} "></script>
+
+  <script src="{% static 'js/formpickers.js'%} "></script>
+  <script src="{% static 'js/form-addons.js'%} "></script>
+  <script src="{% static 'js/x-editable.js'%} "></script>
+  <script src="{% static 'js/dropify.js'%} "></script>
+  <script src="{% static 'js/dropzone.js'%} "></script>
+  <script src="{% static 'js/jquery-file-upload.js'%} "></script>
+  <script src="{% static 'js/formpickers.js'%} "></script>
+  <script src="{% static 'js/form-repeater.js'%} "></script>
+  <script src="{% static 'js/inputmask.js'%} "></script>
+  <script type="text/javascript" src="{% static 'js/data-table.js'%} "></script>
+  <script type="text/javascript" src="{% static 'js/data-table1.js'%} "></script>
+  <script type="text/javascript" src="{% static 'js/data-table2.js'%} "></script>
+  <script src="{% static 'js/morris.js'%} "></script>
+  <script src="{% static 'js/chart.min.js'%} "></script>
+<script src='https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js'></script>
+
+
+  <!-- End custom js for this page-->
+</body>
+
+
+<!-- Mirrored from www.bootstrapdash.com/demo/star-admin2-pro/template/demo/vertical-default-light/index by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 12 Mar 2022 17:01:38 GMT -->
+</html>
+
